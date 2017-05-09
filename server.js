@@ -85,6 +85,7 @@ app.get('/property/:id', function(req, res) {
       console.log(resp);
     } else {
       console.log(err);
+      console.log(err.fields);
     }
   });
 
