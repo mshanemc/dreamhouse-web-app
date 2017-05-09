@@ -40,6 +40,7 @@ org.authenticate({ username: process.env.SF_USERNAME, password: process.env.SF_P
   // store the oauth object for this user
   if(!err) {
     nforceOauth = resp;
+    console.log(nforceOauth);
   } else { console.log(err);}
 });
 
