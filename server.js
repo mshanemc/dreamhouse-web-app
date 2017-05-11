@@ -81,8 +81,8 @@ app.get('/property/:id', function(req, res) {
   pe.set('Type__c', 'detailview');
   org.insert({ sobject: pe, oauth: nforceOauth}, function(err, resp){
     if(!err) {
-      console.log('It worked!');
-      console.log(resp);
+      //console.log('It worked!');
+      //console.log(resp);
     } else {
       console.log(err);
       console.log(err.fields);
