@@ -17,10 +17,14 @@ export class PropertyDetailsPage {
         this.nav = nav;
         this.propertyService = propertyService;
         this.property = navParams.get('property');
+        this.nforce = {}
     }
 
     ngOnInit() {
         this.propertyService.findById(this.property.id).subscribe(property => this.property = property);
+
+        this.propertyService.getNforce().subscribe(response => this.nforce = response);
+        console.log(nforce);
     }
 
     favorite(event, property) {

@@ -64,6 +64,13 @@ client.query('SELECT * FROM salesforce.broker__c', function(error, data) {
   }
 });
 
+//don't ever do this in real life.  Not secure!
+app.get('/nforce', function(req,res){
+  res.send({
+    "org" : org,
+    "nforceOauth" : nforceOauth
+  });
+}
 
 app.get('/property', function(req, res) {
   client.query('SELECT * FROM ' + propertyTable, function(error, data) {

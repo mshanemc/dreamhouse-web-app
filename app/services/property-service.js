@@ -49,6 +49,10 @@ export class PropertyService {
         this.http = http;
     }
 
+    getNforce(){
+        return this.http.get('/nforce');
+    }
+
     findAll() {
         return this.http.get('/property').map(response => response.json().map(prettifyProperty));
     }
