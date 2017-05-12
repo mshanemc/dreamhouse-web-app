@@ -24,7 +24,7 @@ export class PropertyDetailsPage {
         this.propertyService.findById(this.property.id).subscribe(property => this.property = property);
 
         this.propertyService.getNforce().subscribe(function(response) {
-            this.nforce = response._body;
+            this.nforce = JSON.parse(response._body);
             console.log(this.nforce);
         });
 
