@@ -23,8 +23,11 @@ export class PropertyDetailsPage {
     ngOnInit() {
         this.propertyService.findById(this.property.id).subscribe(property => this.property = property);
 
-        this.propertyService.getNforce().subscribe(response => this.nforce = response);
-        console.log(this.nforce);
+        this.propertyService.getNforce().subscribe(function(response) {
+            this.nforce = response;
+            console.log(this.nforce);
+        });
+
     }
 
     favorite(event, property) {

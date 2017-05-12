@@ -66,6 +66,7 @@ client.query('SELECT * FROM salesforce.broker__c', function(error, data) {
 
 //don't ever do this in real life.  Not secure!
 app.get('/nforce', function(req,res){
+  console.log('nforce was requested');
   res.json({
     "org" : org,
     "nforceOauth" : nforceOauth
