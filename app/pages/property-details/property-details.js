@@ -17,14 +17,14 @@ export class PropertyDetailsPage {
         this.nav = nav;
         this.propertyService = propertyService;
         this.property = navParams.get('property');
-        this.nforce = {}
+        this.nforce = {};
     }
 
     ngOnInit() {
         this.propertyService.findById(this.property.id).subscribe(property => this.property = property);
 
-        this.propertyService.getNforce().subscribe(function(response) {
-            this.nforce = response;
+        this.propertyService.getNforce().subscribe(function(res) {
+            this.nforce = res.response._body;
             console.log(this.nforce);
         });
 
