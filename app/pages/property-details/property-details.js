@@ -23,8 +23,8 @@ export class PropertyDetailsPage {
     ngOnInit() {
         this.propertyService.findById(this.property.id).subscribe(property => this.property = property);
 
-        this.propertyService.getNforce().subscribe(function(res) {
-            this.nforce = res.response._body;
+        this.propertyService.getNforce().subscribe(function(response) {
+            this.nforce = response._body;
             console.log(this.nforce);
         });
 
