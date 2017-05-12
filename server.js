@@ -70,7 +70,7 @@ app.get('/nforce', function(req,res){
     "org" : org,
     "nforceOauth" : nforceOauth
   });
-}
+});
 
 app.get('/property', function(req, res) {
   client.query('SELECT * FROM ' + propertyTable, function(error, data) {
